@@ -1,0 +1,41 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "bb-avatar",
+    "friendlyName": "bb-avatar",
+    "description": "A content component for a profile picture and some details",
+    "icon": "Text",
+    "settings": [
+      {
+        "type": "text",
+        "key": "imageUrl",
+        "label": "Image URL"
+      },
+      {
+        "type": "select",
+        "options": ["16px", "24px", "32px","40px", "48px"],
+        "key": "size",
+        "label": "Avatar Size",
+        "defaultValue": "32px"
+      },
+      {
+        "type": "boolean",
+        "key": "isShowingDetails",
+        "label": "Show details?"
+      },
+      {
+        "type": "text",
+        "key": "title",
+        "label": "Title",
+        "dependsOn": "isShowingDetails"
+      },
+      {
+        "type": "text",
+        "key": "caption",
+        "label": "Caption",
+        "dependsOn": "isShowingDetails"
+      }
+    ]
+  }
+}
